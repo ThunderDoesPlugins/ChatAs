@@ -1,0 +1,36 @@
+name: ChatAs
+version: 1.0.0
+api: [3.0.0-ALPHA5,3.0.0-ALPHA7]
+author: Thunder33345
+description: "Chat As Others!"
+main: Thunder33345\ChatAs\ChatAs
+
+commands:
+  chatas:
+    usage: "/chatas <player> <Message...>"
+    permission: "chatas.use"
+    description: "Chat message as the player"
+    aliases: ['ca']
+  chatasexact:
+    usage: "/chatasexact <exact player> <Message...>"
+    permission: "chatas.use"
+    description: "Chat message as the exact player"
+    aliases: ['cae','chatase']
+  hiddenchatas:
+    usage: "/hiddenchatas <player> <Message...>"
+    permission: "chatas.use"
+    description: "Chat message as the player but hidden to the player chatted as"
+    aliases: ['hca']
+  hiddenchatasexact:
+    usage: "/hiddenchatasexact <exact player> <Message...>"
+    permission: "chatas.use"
+    description: "Chat message as the exact player but hidden to the player chatted as"
+    aliases: ['hcae','hchatase']
+
+permissions:
+  chatas:
+    default: false
+    children:
+      chatas.use:
+        description: "Grant others to chat as others!"
+        default: op
